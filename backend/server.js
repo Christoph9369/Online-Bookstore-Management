@@ -23,6 +23,7 @@ app.use("/api/books", booksRoutes);
 mongoose
   .connect(dbConnect)
   .then(() => {
+    console.log("App connected to database");
     // listen for request
     app.listen(PORT, () => {
       console.log(`listening on port on port ${PORT}`);
