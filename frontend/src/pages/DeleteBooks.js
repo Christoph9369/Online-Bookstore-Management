@@ -1,7 +1,7 @@
 import React from "react";
 
 const DeleteBooks = () => {
-  return <div></div>;
+  return <div>DeleteBooks</div>;
 };
 
 export default DeleteBooks;

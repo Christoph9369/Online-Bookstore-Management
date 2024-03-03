@@ -19,8 +19,8 @@ const bookSchema = new mongoose.Schema({
     min: 0, // Assuming price cannot be negative
   },
   availability: {
-    type: Boolean,
-    default: true, // Assuming the book is available by default
+    type: String,
+    // Assuming the book is available by default
   },
   Date: { type: Date, default: Date.now },
 });

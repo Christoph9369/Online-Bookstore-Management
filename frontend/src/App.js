@@ -9,11 +9,11 @@ import Showbooks from "./pages/Showbooks";
 const App = () => {
   return (
     <Routes>
-      <Route path=" /" element={<Home />}></Route>
-      <Route path="/books/create " element={<CreateBooks />}></Route>
-      <Route path="/books/details/:id " element={<Showbooks />}></Route>
-      <Route path=" /books/edit/:id" element={<EditBook />}></Route>
-      <Route path="/books/delete/:id " element={<DeleteBooks />}></Route>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/books/create" element={<CreateBooks />}></Route>
+      <Route path="/books/details/:id" element={<Showbooks />}></Route>
+      <Route path="/books/edit/:id" element={<EditBook />}></Route>
+      <Route path="/books/delete/:id" element={<DeleteBooks />}></Route>
     </Routes>
   );
 };
