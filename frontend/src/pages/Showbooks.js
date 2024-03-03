@@ -9,21 +9,11 @@ const ShowBooks = () => {
   const [loading, setLoading] = useState(false);
 
   const { id } = useParams();
-  // useEffect(() => {
-  //   setLoading(true);
-  //   fetch(`http://localhost:4000/api/books/${id}`, {
-  //     method: "POST",
-  //     headers: { "Content-type": "application/json" },
-  //     body: JSON.stringify(data),
-  //   }).then((response) => {
-  //     setBook(response.data);
-  //     setLoading(true);
-  //   });
-  // });
+
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:4000/api/${id}`)
+      .get(`http://localhost:4000/api/books/${id}`)
       .then((response) => {
         console.log(response);
         setBook(response.data);
@@ -45,7 +35,7 @@ const ShowBooks = () => {
         <div className="flex flex-col border-2 border-sky-400 rounded-xl w-fit p-4">
           <div className="my-4">
             <span className="text-xl mr-4 text-gray-500">Id</span>
-            <span>{book.id}</span>
+            <span>{book._id}</span>
           </div>
           <div className="my-4">
             <span className="text-xl mr-4 text-gray-500">Title</span>

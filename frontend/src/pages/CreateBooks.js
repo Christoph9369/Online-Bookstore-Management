@@ -21,14 +21,16 @@ const CreateBooks = () => {
       availability,
     };
     setLoading(true);
-    fetch("http://localhost:4000/api/books/", {
-      method: "POST",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(data),
-    }).then(() => {
-      navigate("/");
-      console.log("new book added");
-    });
+
+    axios
+      .post("http://localhost:4000/api/books", data)
+      .then(() => {
+        setLoading(false);
+        navigate("/");
+      })
+      .catch((error) => {
+        setLoading(false);
+      });
   };
 
   return (
