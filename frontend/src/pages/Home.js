@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineEdit } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
+import SearchComponent from "../components/SearchComponent";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -28,6 +29,7 @@ const Home = () => {
     <div className="p-4">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl m-8 ">Books List</h1>
+        <SearchComponent />
         <Link to="/books/create">
           <MdOutlineAddBox className="text-sky-800 text-4xl" />
         </Link>
@@ -67,7 +69,7 @@ const Home = () => {
                   {book.genre}
                 </td>
                 <td className="border border-slate-700 rounded-md text-center">
-                  {book.price}
+                  R{book.price}
                 </td>
                 <td className="border border-slate-700 rounded-md text-center">
                   {book.availability}

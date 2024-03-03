@@ -34,31 +34,31 @@ const ShowBooks = () => {
       ) : (
         <div className="flex flex-col border-2 border-sky-400 rounded-xl w-fit p-4">
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Id</span>
+            <span className="text-xl mr-4 text-gray-500">Id : </span>
             <span>{book._id}</span>
           </div>
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Title</span>
+            <span className="text-xl mr-4 text-gray-500">Title : </span>
             <span>{book.title}</span>
           </div>
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Author</span>
+            <span className="text-xl mr-4 text-gray-500">Author : </span>
             <span>{book.author}</span>
           </div>
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Genre</span>
+            <span className="text-xl mr-4 text-gray-500">Genre : </span>
             <span>{book.genre}</span>
           </div>
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Price</span>
-            <span>{book.price}</span>
+            <span className="text-xl mr-4 text-gray-500">Price : </span>
+            <span>R {book.price}</span>
           </div>
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Availibility</span>
+            <span className="text-xl mr-4 text-gray-500">Availibility :</span>
             <span>{book.availibility}</span>
           </div>
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Id</span>
+            <span className="text-xl mr-4 text-gray-500">created time :</span>
             <span>{new Date(book.createdAt).toString()}</span>
           </div>
           <div className="my-4">
